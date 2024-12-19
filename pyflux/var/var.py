@@ -640,7 +640,7 @@ class VAR(tsm.TSM):
             plt.figure(figsize=figsize)
             data = self.data[variable][-h:]
             plt.plot(date_index,data,label=self.data_name[variable] + ' Data')
-            plt.plot(date_index,predictions.ix[:,variable].values,label='Predictions',c='black')
+            plt.plot(date_index,predictions.loc[:,variable].values,label='Predictions',c='black')
             plt.title(self.data_name[variable])
             plt.legend(loc=2)   
             plt.show()      
